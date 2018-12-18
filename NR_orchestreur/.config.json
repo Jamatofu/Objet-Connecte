@@ -446,7 +446,7 @@
   "node-red-contrib-objectid": {
    "name": "node-red-contrib-objectid",
    "version": "0.7.2",
-   "local": false,
+   "local": true,
    "nodes": {
     "objectid": {
      "name": "objectid",
@@ -463,7 +463,7 @@
   "node-red-contrib-mongodb3": {
    "name": "node-red-contrib-mongodb3",
    "version": "1.0.0",
-   "local": false,
+   "local": true,
    "nodes": {
     "mongodb": {
      "name": "mongodb",
@@ -481,7 +481,7 @@
   "node-red-dashboard": {
    "name": "node-red-dashboard",
    "version": "2.12.2",
-   "local": false,
+   "local": true,
    "nodes": {
     "ui_base": {
      "name": "ui_base",
