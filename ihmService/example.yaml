@@ -1,0 +1,89 @@
+header:
+    title : Mon titre
+
+body:
+    - container:
+        name : "Réglage de la Température"
+        items:
+            - form:
+                buttonText : Changer les réglages
+                destination : http://127.0.0.1:1880/user
+                requestKind : POST
+                items :
+                    - type : number
+                      description : Minimum
+                      value : 15
+                      name : minTemperature
+                    - type : number
+                      description : Maximum
+                      value : 28
+                      name : maxTemperature
+    - container:
+        name : "Graphique de Température"
+        items:
+            - chart:
+                name : temperatureChart
+                yAxe :
+                    min : 10
+                    max : 45
+
+    - container:
+        name : "Graphique du pH"
+        items:
+            - chart:
+                name : phChart
+                yAxe :
+                    min : 0
+                    max : 14
+
+    # - container:
+    #     name : "Graphique de lumiere"
+    #     chart:
+    #         name : lumiereChart
+    #         yAxe :
+    #             min : 20
+    #             max : 40
+    - container:
+        name : "Chauffage"
+        items:
+            - button:
+                buttonText : "Activer"
+                destination : http://127.0.0.1:1880/chauffage
+                name: "heating"
+                value: true
+            - button:
+                buttonText : "Eteindre"
+                destination : http://127.0.0.1:1880/chauffage
+                name: "heating"
+                value: false
+    #             max : 40
+    - container:
+        name : "Lumière"
+        items:
+            - button:
+                buttonText : "Activer"
+                destination : http://127.0.0.1:1880/light
+                name: "light"
+                value: true
+            - button:
+                buttonText : "Eteindre"
+                destination : http://127.0.0.1:1880/light
+                name: "light"
+    #             max : 40
+    #
+    - container:
+        name : "Graphique de la turbidité"
+        items:
+            - chart:
+                name : turbiditeChart
+                yAxe :
+                    min : 0
+                    max : 14
+    - container:
+        name : "Nourriture"
+        items:
+            - button:
+                buttonText : "Nourrir"
+                destination : http://127.0.0.1:1880/food
+                name: "light"
+                value: true
