@@ -1,10 +1,9 @@
 #!/usr/bin/python
+# coding: utf-8
 
-import connexion
-from flask_cors import CORS
 from flask import Flask, request, render_template,Response
+from flask_cors import CORS
 from flask import jsonify
-import datetime
 
 app = Flask(__name__)
 CORS(app)
@@ -62,4 +61,4 @@ def addConfiguration(id):
     fileName = "config/" + id + ".yaml"
     with open(fileName, "w") as f:
         f.write(str(request.data))
-    return "    200"
+    return "200"

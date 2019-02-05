@@ -1,4 +1,4 @@
-const URL_API = "http://127.0.0.1:5000/";
+const URL_API = "http://127.0.0.1:4000/";
 
 function generateChart(name, min, max) {
     let ctx = document.getElementById(name)
