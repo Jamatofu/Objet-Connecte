@@ -4,6 +4,7 @@
 from flask import Flask, request, render_template,Response
 from flask_cors import CORS
 from flask import jsonify
+from parser import *
 
 app = Flask(__name__)
 CORS(app)
@@ -24,6 +25,11 @@ def addDataChart(name, data):
 
     dataChart[name].append(data)
 
+@app.route("/")
+def generateHTML():
+    parser = Parser()
+    parser.openConfigurationFile()
+    return parser.generateHtml()
 
 @app.route("/user",  methods=['POST', 'GET'])
 def home():

@@ -5,13 +5,6 @@ import yaml
 
 data = []
 
-with open("example.yaml", 'r') as stream:
-    try:
-        data = yaml.load(stream)
-    except yaml.YAMLError as exc:
-        print(exc)
-
-
 class Tree:
     def __init__(self, kind):
         self.child = []
@@ -85,15 +78,31 @@ def generateHTML(content):
     """.format(content)
 
 def generateHeader(title):
+    style = ""
+    js = ""
+
+
+    with open("style.css", 'r') as f:
+        try:
+            style = f.read()
+        except ex as Exception:
+            print(exc)
+
+    with open("chart.js", 'r') as f:
+        try:
+            js = f.read()
+        except ex as Exception:
+            print(exc)
+
     return """
         <head>
             <meta charset="utf-8">
             <title>{}</title>
-            <link rel="stylesheet" href="style.css">
+            <style>{}</style>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js" type="text/javascript"></script>
-            <script src="chart.js" type="text/javascript"></script>
+            <script>{}</script>
         </head>
-        """.format(title)
+        """.format(title, style, js)
 
 def generateContainer(content, title):
     return """
@@ -164,8 +173,7 @@ def generateTree(tree):
     kindTree = tree.kind
 
     if kindTree == "html":
-        with open("index.html", "w") as f:
-            f.write(generateHTML(content))
+            return generateHTML(content)
     elif kindTree == "header":
         return generateHeader("titre")
     elif kindTree == "body":
@@ -270,6 +278,18 @@ class TreeGenerator():
         return tree
 
 
-tree = TreeGenerator().generate(data)
 
-generateTree(tree)
+class Parser():
+    def openConfigurationFile(self):
+        with open("example.yaml", 'r') as stream:
+            try:
+                self.data = yaml.load(stream)
+            except yaml.YAMLError as exc:
+                print(exc)
+
+    def generateHtml(self):
+        tree = TreeGenerator().generate(self.data)
+        return generateTree(tree)
+
+p = Parser()
+p.openConfigurationFile()
