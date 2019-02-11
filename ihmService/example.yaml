@@ -36,40 +36,50 @@ body:
                     min : 0
                     max : 14
 
-    # - container:
-    #     name : "Graphique de lumiere"
-    #     chart:
-    #         name : lumiereChart
-    #         yAxe :
-    #             min : 20
-    #             max : 40
     - container:
-        name : "Chauffage"
+        name : "Graphique de lumiere"
+        items:
+            - chart:
+                name : lightChart
+                yAxe :
+                    min : 0
+                    max : 800
+    - container:
+        name : "Graphique de niveau d'eau"
+        items:
+            - chart:
+                name : waterChart
+                yAxe :
+                    min : 0
+                    max : 1300
+    - container:
+        name : "Actions"
         items:
             - button:
-                buttonText : "Activer"
-                destination : http://127.0.0.1:1880/chauffage
-                name: "heating"
-                value: true
-            - button:
-                buttonText : "Eteindre"
+                buttonText : "Chauffage"
                 destination : http://127.0.0.1:1880/chauffage
                 name: "heating"
                 value: false
-    #             max : 40
-    - container:
-        name : "Lumière"
-        items:
+                autoreload: false
             - button:
-                buttonText : "Activer"
+                buttonText : "Lumière"
                 destination : http://127.0.0.1:1880/light
                 name: "light"
-                value: true
+                value: false
+                autoreload: false
             - button:
-                buttonText : "Eteindre"
-                destination : http://127.0.0.1:1880/light
+                buttonText : "Nourrir"
+                destination : http://127.0.0.1:1880/food
                 name: "light"
-    #             max : 40
+                value: false
+                autoreload: true
+                autoreload: false
+            - button:
+                buttonText : "Mode automatique"
+                destination : http://127.0.0.1:1880/food
+                name: "light"
+                value: false
+                autoreload: false
     #
     - container:
         name : "Graphique de la turbidité"
@@ -79,11 +89,3 @@ body:
                 yAxe :
                     min : 0
                     max : 14
-    - container:
-        name : "Nourriture"
-        items:
-            - button:
-                buttonText : "Nourrir"
-                destination : http://127.0.0.1:1880/food
-                name: "light"
-                value: true

@@ -89,3 +89,8 @@ select {
     transition-duration: 0.4s;
     background-color: #ff6b6b;
 }
+
+#colorPicker {
+    width: 80px;
+    height: 80px;
+}

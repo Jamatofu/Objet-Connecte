@@ -38,12 +38,13 @@ class FormNode(Tree):
         self.requestKind = requestKind
 
 class ButtonNode(Tree):
-    def __init__(self, buttonText, destination, name, value):
+    def __init__(self, buttonText, destination, name, value, autoreload="false"):
         super().__init__("button")
         self.buttonText = buttonText
         self.destination = destination
         self.name = name
         self.value = value
+        self.autoreload = autoreload
 
 class ChartNode(Tree):
     def __init__(self, name, minValue, maxValue):
@@ -133,10 +134,16 @@ def generateInput(kind, description, value, name):
     """.format(name, description, kind, value, name)
 
 
-def generateButton(buttonText, destination, name, value):
+def generateButton(buttonText, destination, name, value, autoreload):
     return """
-        <button type="button" id="{}" class="button-click" onclick="updateActionneur('{}', '{}')">{}</button>
-    """.format(name, destination, value, buttonText)
+        <div>
+            <span>{}</span>
+            <label class="switch">
+              <input type="checkbox"  onclick="updateActionneur(this, '{}', '{}', '{}', '{}')">
+              <span class="slider round"></span>
+            </label>
+        </div>
+    """.format(buttonText, destination, value, name, autoreload)
 
 def generateChart(name, minValue, maxValue):
     return """
@@ -183,7 +190,7 @@ def generateTree(tree):
     elif kindTree == "form":
         return generateForm(tree.destination, tree.requestKind, content, tree.buttonText)
     elif kindTree == "button":
-        return generateButton(tree.buttonText, tree.destination, tree.name, tree.value)
+        return generateButton(tree.buttonText, tree.destination, tree.name, tree.value, tree.autoreload)
     elif kindTree == "chart":
         return generateChart(tree.name, tree.minValue, tree.maxValue)
     elif kindTree == "js":
@@ -252,12 +259,11 @@ class TreeGenerator():
         return formNode
 
     def generateButtonNode(self, data):
-        buttonNode = ButtonNode(data['buttonText'], data['destination'], data['name'], data['value'])
+        buttonNode = ButtonNode(data['buttonText'], data['destination'], data['name'], data['value'], data['autoreload'])
 
         return buttonNode
 
     def generateInput(self, data):
-        print(data)
         inputNode = InputNode(data['type'], data['description'], data['value'], data['name'])
         return inputNode
 

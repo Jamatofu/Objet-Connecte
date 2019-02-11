@@ -1,4 +1,5 @@
-const URL_API = "http://127.0.0.1:4000/";
+const URL_API = "http://0.0.0.0:5000/";
+const RASP_URL = "http://192.168.1.154:1880/"
 
 function generateChart(name, min, max) {
     let ctx = document.getElementById(name)
@@ -138,7 +139,7 @@ function sendData(element) {
                     header: { 'Content-Type' : 'multipart/form-data'}
                  };
 
-    fetch("http://127.0.0.1:5000/user", myInit)
+    fetch(RASP_URL, myInit)
         .then((response) => {
           console.log("Cool");
           generateToast("Données envoyées", {'type': 'info'});
@@ -148,16 +149,23 @@ function sendData(element) {
         });
 }
 
-function updateActionneur(url, value) {
-    var config = {  method: 'PUT',
+function updateActionneur(checkbox, url, value, name, autoreload) {
+    var config = {  method: 'POST',
                     mode: 'no-cors',
-                    body: { 'value': value},
-                    header: { 'Content-Type' : 'application/json'}
+                    body: JSON.stringify({ 'value': checkbox.checked}),
+                    header: { 'Content-Type' : 'text/plain'}
                  };
 
-    fetch(url, config)
+    if(autoreload == "True") {
+        console.log("Reset");
+        setTimeout(() => {
+            checkbox.checked = false;
+        }, 1000);
+    }
+
+    fetch(RASP_URL + name, config)
         .then((response) => {
-            generateToast("Données envoyées", {'type': 'info'});
+            generateToast("Données envoyées ", {'type': 'info'});
         })
         .catch((error) => {
             generateToast("Erreur", {'type' : 'error'});

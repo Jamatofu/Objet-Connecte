@@ -9,7 +9,6 @@ from parser import *
 app = Flask(__name__)
 CORS(app)
 
-# sensor / List(Of data)
 dataChart = {}
 
 def addDataChart(name, data):
@@ -31,22 +30,9 @@ def generateHTML():
     parser.openConfigurationFile()
     return parser.generateHtml()
 
-@app.route("/user",  methods=['POST', 'GET'])
-def home():
-    with open("result.txt", "w") as f:
-        f.write("lol")
-    if request.method == 'POST':
-        return "thx"
-    return "GET"
-
 @app.route("/chart/<sensor>", methods=['POST', 'GET'])
 def getDataChart(sensor):
     if request.method == 'GET':
-        # return jsonify(
-        #     x=datetime.datetime.now(),
-        #     y=23
-        # )
-
         if sensor in dataChart :
             result = ""
             dataList = dataChart.get(sensor)

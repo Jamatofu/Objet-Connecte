@@ -10,7 +10,8 @@
         <script type="text/javascript">
             var mqtt;
             var reconnectTimeout = 2000;
-            var host = "localhost";
+            // var host = "localhost";
+            var host = "192.168.43.102";
             var port = 9001;
 
             function onConnect() {
@@ -54,7 +55,6 @@
         <div class="container">
             <h3>Actions sur l'aquarium</h1>
             <button type="button" class="button-click" id="buttonFile">Chauffage</button>
-            <button type="button" class="button-click" id="buttonFile">Distribuer la nourriture</button>
         </div>
 
         <div class="container">
@@ -67,6 +67,12 @@
             </select>
         </div>
 
+        <div class="container">
+            <h3>Nourriture</h3>
+
+
+            <button type="button" class="button-click" id="buttonFile">Distribuer la nourriture</button>
+        </div>
 
 
 
@@ -91,20 +97,10 @@
                 data: {
                     datasets: [{
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
+                            'rgba(255, 99, 132, 0.2)'
                         ],
                         borderColor: [
-                            'rgba(255,99,132,1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
+                            'rgba(255,99,132,1)'
                         ],
                         borderWidth: 1
                     }]
@@ -158,6 +154,11 @@
                 }
 
                 myChart.data.datasets[0].data.pop();
+            }
+
+            function changeColor(e) {
+                let color = e.value;
+                console.log(color);
             }
         </script>
     </body>
