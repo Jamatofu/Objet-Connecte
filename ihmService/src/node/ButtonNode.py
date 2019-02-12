@@ -1,14 +1,14 @@
 from . import Tree
 
 class ButtonNode(Tree.Tree):
-    def __init__(self, buttonText, destination, id, value, autoreload="false", onchange="null"):
+    def __init__(self, buttonText, destination, id, value, autoreload="false", blockOther="null"):
         super().__init__("button")
         self.buttonText = buttonText
         self.destination = destination
         self.id = id
         self.value = value
         self.autoreload = autoreload
-        self.onchange = onchange
+        self.blockOther = blockOther
 
     def generate(self):
         checked = ""
@@ -23,7 +23,7 @@ class ButtonNode(Tree.Tree):
                   <input type="checkbox"
                          id="{}"
                         onclick="updateActionneur(this, '{}', '{}', '{}', '{}');
-                    makeObjectInvisible(this.checked    , '{}')"
+                    blockOtherButton(this.checked, '{}')"
                     {}>
                   <span class="slider round"></span>
                 </label>
@@ -34,5 +34,5 @@ class ButtonNode(Tree.Tree):
                     self.value,
                     self.id,
                     self.autoreload,
-                    self.onchange,
+                    self.blockOther,
                     checked)

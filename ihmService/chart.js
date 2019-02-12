@@ -166,7 +166,6 @@ function updateActionneur(checkbox, url, value, name, autoreload) {
 
     if(autoreload == "True") {
         setTimeout(() => {
-            console.log("Reset");
             checkbox.checked = false;
         }, 1000);
     }
@@ -181,14 +180,16 @@ function updateActionneur(checkbox, url, value, name, autoreload) {
 }
 
 
-function makeObjectInvisible(active, id) {
+function blockOtherButton(active, id) {
   if (id != "null") {
     let objectDiv = document.getElementById(id);
-    console.log(active);
+
     if (!active) {
-      objectDiv.style.display = "none";
+      console.log("Bouton desactive");
+      objectDiv.disabled = true;
     } else {
-      objectDiv.style.display = "block";
+      console.log("Bouton active");
+      objectDiv.disabled = false;
     }
   }
 }

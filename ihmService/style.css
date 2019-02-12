@@ -217,7 +217,3 @@ input {
 .title-orange {
   background-color: #f39c12;
 }
-
-.button-disabled {
-  pointer-events:none;
-}

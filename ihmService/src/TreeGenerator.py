@@ -73,8 +73,9 @@ class TreeGenerator():
         return formNode
 
     def generateButtonNode(self, data):
-        if "onChange" in data:
-            buttonNode = ButtonNode(data['buttonText'], data['destination'], data['id'], data['value'], data['autoreload'], data['onChange'])
+        if "blockOther" in data:
+            print(data['blockOther'])
+            buttonNode = ButtonNode(data['buttonText'], data['destination'], data['id'], data['value'], data['autoreload'], data['blockOther'])
         else:
             buttonNode = ButtonNode(data['buttonText'], data['destination'], data['id'], data['value'], data['autoreload'])
 

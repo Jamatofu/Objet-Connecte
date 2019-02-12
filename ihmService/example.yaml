@@ -72,21 +72,21 @@ body:
                 id: "light"
                 value: true
                 autoreload: false
-                onChange: "actionContainer"
+                blockOther: "heatingState"
             - button:
                   buttonText : "Chauffage automatique"
                   destination : http://127.0.0.1:1880/
                   id: "light"
                   value: true
                   autoreload: false
-                  onChange: "actionContainer"
+                  blockOther: "lightingState"
             - button:
                   buttonText : "Nourriture automatique"
                   destination : http://127.0.0.1:1880/
                   id: "light"
                   value: true
                   autoreload: false
-                  onChange: "actionContainer"
+                  blockOther: "foodState"
 
     - container:
         title : "Actions"
@@ -107,7 +107,7 @@ body:
             - button:
                 buttonText : "Nourrir"
                 destination : http://127.0.0.1:1880/food
-                id: "lightState"
+                id: "foodState"
                 value: false
                 autoreload: true
 
@@ -129,10 +129,10 @@ body:
         items:
             - form:
                 buttonText : Changer le numéro de téléphone
-                destination : http://192.168.1.154:1880/tempSettings
+                destination : http://192.168.1.144:1880/numberPhone
                 requestKind : POST
                 items :
                     - type : tel
                       description : Taper votre numéro
                       value : 330677154214
-                      name : numeroPhone
+                      name : numberPhone
