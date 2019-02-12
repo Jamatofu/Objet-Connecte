@@ -33,7 +33,10 @@ class TreeGenerator():
         self.jsContent = self.jsContent + content + "\n"
 
     def generateContainer(self, data):
-        containerNode = ContainerNode(data['name'], data['id'])
+        if "color" in data:
+            containerNode = ContainerNode(data['title'], data['id'], data['color'])
+        else:
+            containerNode = ContainerNode(data['title'], data['id'])
 
         for item in data['items']:
             try:
@@ -71,9 +74,9 @@ class TreeGenerator():
 
     def generateButtonNode(self, data):
         if "onChange" in data:
-            buttonNode = ButtonNode(data['buttonText'], data['destination'], data['name'], data['value'], data['autoreload'], data['onChange'])
+            buttonNode = ButtonNode(data['buttonText'], data['destination'], data['id'], data['value'], data['autoreload'], data['onChange'])
         else:
-            buttonNode = ButtonNode(data['buttonText'], data['destination'], data['name'], data['value'], data['autoreload'])
+            buttonNode = ButtonNode(data['buttonText'], data['destination'], data['id'], data['value'], data['autoreload'])
 
         return buttonNode
 
