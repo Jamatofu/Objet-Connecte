@@ -4,7 +4,7 @@
 from flask import Flask, request, render_template,Response
 from flask_cors import CORS
 from flask import jsonify
-from parser import *
+from src.parser import Parser
 
 app = Flask(__name__)
 CORS(app)

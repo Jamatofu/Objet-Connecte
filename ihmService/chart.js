@@ -129,17 +129,24 @@ function reduceToast(e) {
     }, 5);
 }
 
-function sendData(element) {
+// tempSettings
+function sendData(element, url) {
     let formParent = element.parentNode;
     let formData = new FormData(formParent);
 
+    var a = {};
+    formData.forEach(function(value, key){
+        a[key] = value;
+    });
+
+    var json = JSON.stringify(a);
     var myInit = {  method: 'POST',
                     mode: 'no-cors',
-                    body: formData,
-                    header: { 'Content-Type' : 'multipart/form-data'}
+                    body: json,
+                    header: { 'Content-Type' : 'text/plain'}
                  };
 
-    fetch(RASP_URL, myInit)
+    fetch(url, myInit)
         .then((response) => {
           console.log("Cool");
           generateToast("Données envoyées", {'type': 'info'});
@@ -156,9 +163,10 @@ function updateActionneur(checkbox, url, value, name, autoreload) {
                     header: { 'Content-Type' : 'text/plain'}
                  };
 
+
     if(autoreload == "True") {
-        console.log("Reset");
         setTimeout(() => {
+            console.log("Reset");
             checkbox.checked = false;
         }, 1000);
     }
@@ -170,4 +178,17 @@ function updateActionneur(checkbox, url, value, name, autoreload) {
         .catch((error) => {
             generateToast("Erreur", {'type' : 'error'});
         })
+}
+
+
+function makeObjectInvisible(active, id) {
+  if (id != "null") {
+    let objectDiv = document.getElementById(id);
+    console.log(active);
+    if (!active) {
+      objectDiv.style.display = "none";
+    } else {
+      objectDiv.style.display = "block";
+    }
+  }
 }

@@ -4,22 +4,24 @@ header:
 body:
     - container:
         name : "Réglage de la Température"
+        id : "temperatureSetting"
         items:
             - form:
                 buttonText : Changer les réglages
-                destination : http://127.0.0.1:1880/user
+                destination : http://192.168.1.154:1880/tempSettings
                 requestKind : POST
                 items :
                     - type : number
                       description : Minimum
                       value : 15
-                      name : minTemperature
+                      name : min
                     - type : number
                       description : Maximum
                       value : 28
-                      name : maxTemperature
+                      name : max
     - container:
         name : "Graphique de Température"
+        id : "temperatureChartContainer"
         items:
             - chart:
                 name : temperatureChart
@@ -29,6 +31,7 @@ body:
 
     - container:
         name : "Graphique du pH"
+        id : "phChartContainer"
         items:
             - chart:
                 name : phChart
@@ -38,6 +41,7 @@ body:
 
     - container:
         name : "Graphique de lumiere"
+        id : "lightChartContainer"
         items:
             - chart:
                 name : lightChart
@@ -46,6 +50,7 @@ body:
                     max : 800
     - container:
         name : "Graphique de niveau d'eau"
+        id : "waterLevelChartContainer"
         items:
             - chart:
                 name : waterChart
@@ -53,7 +58,34 @@ body:
                     min : 0
                     max : 1300
     - container:
+        name : "Mode automatique"
+        id : "automatiqueModeContainer"
+        items:
+            - button:
+                buttonText : "Lumière automatique"
+                destination : http://127.0.0.1:1880/
+                name: "light"
+                value: true
+                autoreload: false
+                onChange: "actionContainer"
+            - button:
+                  buttonText : "Chauffage automatique"
+                  destination : http://127.0.0.1:1880/
+                  name: "light"
+                  value: true
+                  autoreload: false
+                  onChange: "actionContainer"
+            - button:
+                  buttonText : "Nourriture automatique"
+                  destination : http://127.0.0.1:1880/
+                  name: "light"
+                  value: true
+                  autoreload: false
+                  onChange: "actionContainer"
+
+    - container:
         name : "Actions"
+        id: "actionContainer"
         items:
             - button:
                 buttonText : "Chauffage"
@@ -63,8 +95,8 @@ body:
                 autoreload: false
             - button:
                 buttonText : "Lumière"
-                destination : http://127.0.0.1:1880/light
-                name: "light"
+                destination : http://127.0.0.1:1880/lighting
+                name: "lighting"
                 value: false
                 autoreload: false
             - button:
@@ -73,16 +105,10 @@ body:
                 name: "light"
                 value: false
                 autoreload: true
-                autoreload: false
-            - button:
-                buttonText : "Mode automatique"
-                destination : http://127.0.0.1:1880/food
-                name: "light"
-                value: false
-                autoreload: false
-    #
+
     - container:
         name : "Graphique de la turbidité"
+        id : "turbiditeChartContainer"
         items:
             - chart:
                 name : turbiditeChart
