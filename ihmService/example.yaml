@@ -98,18 +98,21 @@ body:
                 id: "heatingState"
                 value: false
                 autoreload: false
+                updater: http://0.0.0.0:5000/state/heating
             - button:
                 buttonText : "Lumière"
                 destination : http://127.0.0.1:1880/lighting
                 id: "lightingState"
                 value: false
                 autoreload: false
+                updater: http://0.0.0.0:5000/state/lighting
             - button:
                 buttonText : "Nourrir"
                 destination : http://127.0.0.1:1880/food
                 id: "foodState"
                 value: false
                 autoreload: true
+                updater: http://0.0.0.0:5000/state/food
 
     - container:
         title : "Graphique de la turbidité"

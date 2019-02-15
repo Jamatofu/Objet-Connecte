@@ -179,6 +179,26 @@ function updateActionneur(checkbox, url, value, name, autoreload) {
         })
 }
 
+function updateStateButton(id, url) {
+  setInterval(() => {
+      fetch(url + "/state/" + id, {method: 'GET',
+             headers: new Headers(),
+             mode: 'cors'})
+          .then((response) => {
+              return response.json();
+          })
+          .then((data) => {
+              if(data != "null" && data != "") {
+                let button = document.getElementById(id);
+                button.checked = data;
+              }
+          })
+          .catch((error) => {
+              console.log("Error : " + error);
+          });
+  }, 1000);
+}
+
 
 function blockOtherButton(active, id) {
   if (id != "null") {
