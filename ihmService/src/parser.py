@@ -7,8 +7,9 @@ from .TreeGenerator import TreeGenerator
 data = []
 
 class Parser():
-    def openConfigurationFile(self):
-        with open("example.yaml", 'r') as stream:
+    def openConfigurationFile(self, fileNameConfig):
+        fileNameConfig = "config/" + fileNameConfig + ".yaml"
+        with open(fileNameConfig, 'r') as stream:
             try:
                 self.data = yaml.load(stream)
             except yaml.YAMLError as exc:
@@ -17,7 +18,3 @@ class Parser():
     def generateHtml(self):
         tree = TreeGenerator().generate(self.data)
         return tree.generate()
-
-p = Parser()
-p.openConfigurationFile()
-p.generateHtml()

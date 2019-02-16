@@ -24,11 +24,19 @@ def addDataChart(name, data):
 
     dataChart[name].append(data)
 
-@app.route("/")
-def generateHTML():
-    parser = Parser()
-    parser.openConfigurationFile()
-    return parser.generateHtml()
+@app.route("/<site>", methods=['POST', 'GET'])
+def addConfigurationFile(site):
+    if request.method == 'POST':
+        fileName = "config/" + site + ".yaml"
+        with open(fileName, "w") as f:
+            f.write(request.form['content'])
+    elif request.method == 'GET':
+        parser = Parser()
+        parser.openConfigurationFile(site)
+        return parser.generateHtml()
+
+    return "200"
+
 
 @app.route("/chart/<sensor>", methods=['POST', 'GET'])
 def getDataChart(sensor):
@@ -47,10 +55,3 @@ def getDataChart(sensor):
     elif request.method == 'POST':
         addDataChart(sensor, request.get_json())
         return 'Cool'
-
-@app.route("/<id>", methods=['POST'])
-def addConfiguration(id):
-    fileName = "config/" + id + ".yaml"
-    with open(fileName, "w") as f:
-        f.write(str(request.data))
-    return "200"
