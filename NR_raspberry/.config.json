@@ -464,6 +464,130 @@
      "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-contrib-grovepi/grovepi.js"
     }
    }
+  },
+  "node-red-node-serialport": {
+   "name": "node-red-node-serialport",
+   "version": "0.6.8",
+   "local": true,
+   "nodes": {
+    "serialport": {
+     "name": "serialport",
+     "types": [
+      "serial in",
+      "serial out",
+      "serial request",
+      "serial-port"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-serialport",
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-node-serialport/25-serial.js"
+    }
+   }
+  },
+  "node-red-contrib-mqtt-broker": {
+   "name": "node-red-contrib-mqtt-broker",
+   "version": "0.2.4",
+   "local": true,
+   "nodes": {
+    "mosca-mqtt-broker": {
+     "name": "mosca-mqtt-broker",
+     "types": [
+      "mosca in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mqtt-broker",
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-contrib-mqtt-broker/mosca.js"
+    }
+   }
+  },
+  "node-red-contrib-play-audio": {
+   "name": "node-red-contrib-play-audio",
+   "version": "2.3.2",
+   "local": true,
+   "nodes": {
+    "play-audio": {
+     "name": "play-audio",
+     "types": [
+      "play audio"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-play-audio",
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-contrib-play-audio/play-audio.js"
+    }
+   }
+  },
+  "node-red-node-ping": {
+   "name": "node-red-node-ping",
+   "version": "0.0.15",
+   "local": true,
+   "nodes": {
+    "ping": {
+     "name": "ping",
+     "types": [
+      "ping"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-ping",
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-node-ping/88-ping.js"
+    }
+   }
+  },
+  "node-red-node-random": {
+   "name": "node-red-node-random",
+   "version": "0.1.2",
+   "local": true,
+   "nodes": {
+    "random": {
+     "name": "random",
+     "types": [
+      "random"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-random",
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-node-random/random.js"
+    }
+   }
+  },
+  "node-red-contrib-ibm-watson-iot": {
+   "name": "node-red-contrib-ibm-watson-iot",
+   "version": "0.2.8",
+   "local": true,
+   "nodes": {
+    "wiotp": {
+     "name": "wiotp",
+     "types": [
+      "wiotp-credentials",
+      "wiotp in",
+      "wiotp out"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-ibm-watson-iot",
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-contrib-ibm-watson-iot/application/wiotp.js"
+    }
+   }
+  },
+  "node-red-node-smooth": {
+   "name": "node-red-node-smooth",
+   "version": "0.1.0",
+   "local": true,
+   "nodes": {
+    "smooth": {
+     "name": "smooth",
+     "types": [
+      "smooth"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-smooth",
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-node-smooth/17-smooth.js"
+    }
+   }
   }
  },
  "_credentialSecret": "cb64c3a6ab966fbadf03b73e7457c0a063982475c0ca1e3a0d8941797bf09288",
