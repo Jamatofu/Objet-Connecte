@@ -72,20 +72,20 @@ body:
                 id: "light"
                 value: true
                 autoreload: false
-                blockOther: "heatingState"
+                blockOther: "lightingState"
             - button:
                   buttonText : "Chauffage automatique"
                   destination : http://127.0.0.1:1880/
                   id: "light"
                   value: true
                   autoreload: false
-                  blockOther: "lightingState"
+                  blockOther: "heatingState"
             - button:
                   buttonText : "Nourriture automatique"
                   destination : http://127.0.0.1:1880/
                   id: "light"
                   value: true
-                  autoreload: false
+                  autoreload: true
                   blockOther: "foodState"
 
     - container:
@@ -93,19 +93,19 @@ body:
         id: "actionContainer"
         items:
             - button:
-                buttonText : "Chauffage"
-                destination : http://127.0.0.1:1880/chauffage
-                id: "heatingState"
-                value: false
-                autoreload: false
-                updater: http://0.0.0.0:5000/state/heating
-            - button:
                 buttonText : "Lumière"
                 destination : http://127.0.0.1:1880/lighting
                 id: "lightingState"
                 value: false
                 autoreload: false
                 updater: http://0.0.0.0:5000/state/lighting
+            - button:
+                buttonText : "Chauffage"
+                destination : http://127.0.0.1:1880/chauffage
+                id: "heatingState"
+                value: false
+                autoreload: false
+                updater: http://0.0.0.0:5000/state/heating
             - button:
                 buttonText : "Nourrir"
                 destination : http://127.0.0.1:1880/food
@@ -137,5 +137,5 @@ body:
                 items :
                     - type : tel
                       description : Taper votre numéro
-                      value : 330677154214
+                      value : 01020305
                       name : numberPhone

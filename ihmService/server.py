@@ -10,6 +10,7 @@ app = Flask(__name__)
 CORS(app)
 
 dataChart = {}
+dataButtonDict = {}
 
 def addDataChart(name, data):
     chart = []
@@ -46,12 +47,25 @@ def getDataChart(sensor):
             dataList = dataChart.get(sensor)
             if len(dataList) > 0:
                 result = dataList.pop()
-            print(result)
-
-            print("Nb d'element => " + str(result))
+                
             return jsonify(result)
         else:
             return jsonify("")
     elif request.method == 'POST':
         addDataChart(sensor, request.get_json())
         return 'Cool'
+
+@app.route("/button/<name>", methods=['POST', 'GET'])
+def dataButton(name):
+    print(name)
+    if request.method == 'GET':
+        if name in dataButtonDict :
+            print("Ca y est")
+            result = dataButtonDict.get(name)
+
+            return jsonify(result)
+        return jsonify(False)
+    elif request.method == 'POST':
+        dataButtonDict[name] = request.form['value']
+        print("Bien ajoute")
+        return "200"

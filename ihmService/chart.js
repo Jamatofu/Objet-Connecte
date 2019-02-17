@@ -204,7 +204,9 @@ function blockOtherButton(active, id) {
   if (id != "null") {
     let objectDiv = document.getElementById(id);
 
-    if (!active) {
+    console.log("Au clic => " + active);
+
+    if (active) {
       console.log("Bouton desactive");
       objectDiv.disabled = true;
     } else {
