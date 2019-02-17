@@ -446,7 +446,7 @@
   "node-red-contrib-grovepi": {
    "name": "node-red-contrib-grovepi",
    "version": "0.1.8",
-   "local": false,
+   "local": true,
    "nodes": {
     "grovepi": {
      "name": "grovepi",
