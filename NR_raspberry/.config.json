@@ -13,7 +13,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/analysis/72-sentiment.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/analysis/72-sentiment.js"
     },
     "inject": {
      "name": "inject",
@@ -23,7 +23,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/core/20-inject.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/core/20-inject.js"
     },
     "catch": {
      "name": "catch",
@@ -33,7 +33,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/core/25-catch.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/core/25-catch.js"
     },
     "status": {
      "name": "status",
@@ -43,7 +43,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/core/25-status.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/core/25-status.js"
     },
     "debug": {
      "name": "debug",
@@ -53,7 +53,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/core/58-debug.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/core/58-debug.js"
     },
     "link": {
      "name": "link",
@@ -64,7 +64,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/core/60-link.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/core/60-link.js"
     },
     "exec": {
      "name": "exec",
@@ -74,7 +74,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/core/75-exec.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/core/75-exec.js"
     },
     "function": {
      "name": "function",
@@ -84,7 +84,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/core/80-function.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/core/80-function.js"
     },
     "template": {
      "name": "template",
@@ -94,7 +94,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/core/80-template.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/core/80-template.js"
     },
     "delay": {
      "name": "delay",
@@ -104,7 +104,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/core/89-delay.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/core/89-delay.js"
     },
     "trigger": {
      "name": "trigger",
@@ -114,7 +114,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/core/89-trigger.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/core/89-trigger.js"
     },
     "comment": {
      "name": "comment",
@@ -124,7 +124,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/core/90-comment.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/core/90-comment.js"
     },
     "unknown": {
      "name": "unknown",
@@ -134,7 +134,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/core/98-unknown.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/core/98-unknown.js"
     },
     "rpi-gpio": {
      "name": "rpi-gpio",
@@ -147,7 +147,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/hardware/36-rpi-gpio.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/hardware/36-rpi-gpio.js"
     },
     "tls": {
      "name": "tls",
@@ -157,7 +157,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/io/05-tls.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/io/05-tls.js"
     },
     "mqtt": {
      "name": "mqtt",
@@ -169,7 +169,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/io/10-mqtt.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/io/10-mqtt.js"
     },
     "httpin": {
      "name": "httpin",
@@ -180,7 +180,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/io/21-httpin.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/io/21-httpin.js"
     },
     "httprequest": {
      "name": "httprequest",
@@ -190,7 +190,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/io/21-httprequest.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/io/21-httprequest.js"
     },
     "websocket": {
      "name": "websocket",
@@ -203,7 +203,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/io/22-websocket.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/io/22-websocket.js"
     },
     "watch": {
      "name": "watch",
@@ -213,7 +213,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/io/23-watch.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/io/23-watch.js"
     },
     "tcpin": {
      "name": "tcpin",
@@ -225,7 +225,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/io/31-tcpin.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/io/31-tcpin.js"
     },
     "udp": {
      "name": "udp",
@@ -236,7 +236,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/io/32-udp.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/io/32-udp.js"
     },
     "switch": {
      "name": "switch",
@@ -246,7 +246,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/logic/10-switch.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/logic/10-switch.js"
     },
     "change": {
      "name": "change",
@@ -256,7 +256,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/logic/15-change.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/logic/15-change.js"
     },
     "range": {
      "name": "range",
@@ -266,7 +266,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/logic/16-range.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/logic/16-range.js"
     },
     "split": {
      "name": "split",
@@ -277,7 +277,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/logic/17-split.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/logic/17-split.js"
     },
     "sort": {
      "name": "sort",
@@ -287,7 +287,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/logic/18-sort.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/logic/18-sort.js"
     },
     "batch": {
      "name": "batch",
@@ -297,7 +297,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/logic/19-batch.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/logic/19-batch.js"
     },
     "CSV": {
      "name": "CSV",
@@ -307,7 +307,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/parsers/70-CSV.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/parsers/70-CSV.js"
     },
     "HTML": {
      "name": "HTML",
@@ -317,7 +317,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/parsers/70-HTML.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/parsers/70-HTML.js"
     },
     "JSON": {
      "name": "JSON",
@@ -327,7 +327,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/parsers/70-JSON.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/parsers/70-JSON.js"
     },
     "XML": {
      "name": "XML",
@@ -337,7 +337,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/parsers/70-XML.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/parsers/70-XML.js"
     },
     "YAML": {
      "name": "YAML",
@@ -347,7 +347,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/parsers/70-YAML.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/parsers/70-YAML.js"
     },
     "tail": {
      "name": "tail",
@@ -357,7 +357,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/storage/28-tail.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/storage/28-tail.js"
     },
     "file": {
      "name": "file",
@@ -368,7 +368,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red",
-     "file": "/usr/local/lib/node_modules/node-red/nodes/core/storage/50-file.js"
+     "file": "/usr/lib/node_modules/node-red/nodes/core/storage/50-file.js"
     }
    }
   },
@@ -386,7 +386,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red-node-email",
-     "file": "/usr/local/lib/node_modules/node-red/node_modules/node-red-node-email/61-email.js"
+     "file": "/usr/lib/node_modules/node-red/node_modules/node-red-node-email/61-email.js"
     }
    }
   },
@@ -403,13 +403,13 @@
      "enabled": true,
      "local": false,
      "module": "node-red-node-feedparser",
-     "file": "/usr/local/lib/node_modules/node-red/node_modules/node-red-node-feedparser/32-feedparse.js"
+     "file": "/usr/lib/node_modules/node-red/node_modules/node-red-node-feedparser/32-feedparse.js"
     }
    }
   },
   "node-red-node-rbe": {
    "name": "node-red-node-rbe",
-   "version": "0.2.4",
+   "version": "0.2.3",
    "local": false,
    "nodes": {
     "rbe": {
@@ -420,13 +420,13 @@
      "enabled": true,
      "local": false,
      "module": "node-red-node-rbe",
-     "file": "/usr/local/lib/node_modules/node-red/node_modules/node-red-node-rbe/rbe.js"
+     "file": "/usr/lib/node_modules/node-red/node_modules/node-red-node-rbe/rbe.js"
     }
    }
   },
   "node-red-node-twitter": {
    "name": "node-red-node-twitter",
-   "version": "1.1.4",
+   "version": "1.1.3",
    "local": false,
    "nodes": {
     "twitter": {
@@ -439,7 +439,7 @@
      "enabled": true,
      "local": false,
      "module": "node-red-node-twitter",
-     "file": "/usr/local/lib/node_modules/node-red/node_modules/node-red-node-twitter/27-twitter.js"
+     "file": "/usr/lib/node_modules/node-red/node_modules/node-red-node-twitter/27-twitter.js"
     }
    }
   },
@@ -461,7 +461,131 @@
      "enabled": true,
      "local": true,
      "module": "node-red-contrib-grovepi",
-     "file": "/home/bealclement/Bureau/OCS/Objet-Connecte/NR_raspberry/node_modules/node-red-contrib-grovepi/grovepi.js"
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-contrib-grovepi/grovepi.js"
+    }
+   }
+  },
+  "node-red-node-serialport": {
+   "name": "node-red-node-serialport",
+   "version": "0.6.8",
+   "local": true,
+   "nodes": {
+    "serialport": {
+     "name": "serialport",
+     "types": [
+      "serial in",
+      "serial out",
+      "serial request",
+      "serial-port"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-serialport",
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-node-serialport/25-serial.js"
+    }
+   }
+  },
+  "node-red-contrib-mqtt-broker": {
+   "name": "node-red-contrib-mqtt-broker",
+   "version": "0.2.4",
+   "local": true,
+   "nodes": {
+    "mosca-mqtt-broker": {
+     "name": "mosca-mqtt-broker",
+     "types": [
+      "mosca in"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-mqtt-broker",
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-contrib-mqtt-broker/mosca.js"
+    }
+   }
+  },
+  "node-red-contrib-play-audio": {
+   "name": "node-red-contrib-play-audio",
+   "version": "2.3.2",
+   "local": true,
+   "nodes": {
+    "play-audio": {
+     "name": "play-audio",
+     "types": [
+      "play audio"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-play-audio",
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-contrib-play-audio/play-audio.js"
+    }
+   }
+  },
+  "node-red-node-ping": {
+   "name": "node-red-node-ping",
+   "version": "0.0.15",
+   "local": true,
+   "nodes": {
+    "ping": {
+     "name": "ping",
+     "types": [
+      "ping"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-ping",
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-node-ping/88-ping.js"
+    }
+   }
+  },
+  "node-red-node-random": {
+   "name": "node-red-node-random",
+   "version": "0.1.2",
+   "local": true,
+   "nodes": {
+    "random": {
+     "name": "random",
+     "types": [
+      "random"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-random",
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-node-random/random.js"
+    }
+   }
+  },
+  "node-red-contrib-ibm-watson-iot": {
+   "name": "node-red-contrib-ibm-watson-iot",
+   "version": "0.2.8",
+   "local": true,
+   "nodes": {
+    "wiotp": {
+     "name": "wiotp",
+     "types": [
+      "wiotp-credentials",
+      "wiotp in",
+      "wiotp out"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-contrib-ibm-watson-iot",
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-contrib-ibm-watson-iot/application/wiotp.js"
+    }
+   }
+  },
+  "node-red-node-smooth": {
+   "name": "node-red-node-smooth",
+   "version": "0.1.0",
+   "local": true,
+   "nodes": {
+    "smooth": {
+     "name": "smooth",
+     "types": [
+      "smooth"
+     ],
+     "enabled": true,
+     "local": true,
+     "module": "node-red-node-smooth",
+     "file": "/home/pi/gitRepo/Objet-Connecte/NR_raspberry/node_modules/node-red-node-smooth/17-smooth.js"
     }
    }
   }
