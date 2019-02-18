@@ -215,3 +215,27 @@ function blockOtherButton(active, id) {
     }
   }
 }
+
+function updateStateButton(idButton) {
+  setInterval(() => {
+      fetch(URL_API + "button/" + idButton, {method: 'GET',
+             headers: new Headers(),
+             mode: 'cors'})
+          .then((response) => {
+              return response.json();
+          })
+          .then((data) => {
+          // console.log(idButton + " => " + data);
+                let button = document.getElementById(idButton);
+                console.log(idButton + " => " + data);
+                if(data == "True") {
+                  button.checked = true;
+                } else {
+                  button.checked = false;
+                }
+          })
+          .catch((error) => {
+              console.log("Error : " + error);
+          });
+  }, 1000);
+}

@@ -79,6 +79,8 @@ class TreeGenerator():
         else:
             buttonNode = ButtonNode(data['buttonText'], data['destination'], data['id'], data['value'], data['autoreload'])
 
+        self.addJavascriptContent("updateStateButton(\"{}\");".format(data['id']))
+
         return buttonNode
 
     def generateInput(self, data):
