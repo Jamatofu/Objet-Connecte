@@ -1,0 +1,141 @@
+header:
+    title : Mon titre
+
+body:
+    - container:
+        title : "Réglage de la Température"
+        id : "temperatureSetting"
+        color : blue
+        items:
+            - form:
+                buttonText : Changer les réglages
+                destination : http://192.168.1.154:1880/tempSettings
+                requestKind : POST
+                items :
+                    - type : number
+                      description : Minimum
+                      value : 15
+                      name : min
+                    - type : number
+                      description : Maximum
+                      value : 28
+                      name : max
+    - container:
+        title : "Graphique de Température"
+        id : "temperatureChartContainer"
+        color: orange
+        items:
+            - chart:
+                name : temperatureChart
+                yAxe :
+                    min : 10
+                    max : 45
+
+    - container:
+        title : "Graphique du pH"
+        id : "phChartContainer"
+        color: orange
+        items:
+            - chart:
+                name : phChart
+                yAxe :
+                    min : 0
+                    max : 14
+
+    - container:
+        title : "Graphique de lumiere"
+        id : "lightChartContainer"
+        color: orange
+        items:
+            - chart:
+                name : lightChart
+                yAxe :
+                    min : 0
+                    max : 800
+    - container:
+        title : "Graphique de niveau d'eau"
+        id : "waterLevelChartContainer"
+        color: orange
+        items:
+            - chart:
+                name : waterChart
+                yAxe :
+                    min : 0
+                    max : 1300
+    - container:
+        title : "Mode automatique"
+        id : "automatiqueModeContainer"
+        items:
+            - button:
+                buttonText : "Lumière automatique"
+                destination : http://127.0.0.1:1880/
+                id: "light"
+                value: true
+                autoreload: false
+                blockOther: "heatingState"
+            - button:
+                  buttonText : "Chauffage automatique"
+                  destination : http://127.0.0.1:1880/
+                  id: "light"
+                  value: true
+                  autoreload: false
+                  blockOther: "lightingState"
+            - button:
+                  buttonText : "Nourriture automatique"
+                  destination : http://127.0.0.1:1880/
+                  id: "light"
+                  value: true
+                  autoreload: false
+                  blockOther: "foodState"
+
+    - container:
+        title : "Actions"
+        id: "actionContainer"
+        items:
+            - button:
+                buttonText : "Chauffage"
+                destination : http://127.0.0.1:1880/chauffage
+                id: "heatingState"
+                value: false
+                autoreload: false
+                updater: http://0.0.0.0:5000/state/heating
+            - button:
+                buttonText : "Lumière"
+                destination : http://127.0.0.1:1880/lighting
+                id: "lightingState"
+                value: false
+                autoreload: false
+                updater: http://0.0.0.0:5000/state/lighting
+            - button:
+                buttonText : "Nourrir"
+                destination : http://127.0.0.1:1880/food
+                id: "foodState"
+                value: false
+                autoreload: true
+                updater: http://0.0.0.0:5000/state/food
+
+    - container:
+        title : "Graphique de la turbidité"
+        id : "turbiditeChartContainer"
+        color: orange
+        items:
+            - chart:
+                name : turbiditeChart
+                yAxe :
+                    min : 0
+                    max : 14
+
+    - container:
+        title : "Réglage du service SMS"
+        id : "textSetting"
+        color: blue
+        items:
+            - form:
+                buttonText : Changer le numéro de téléphone
+                destination : http://192.168.1.144:1880/numberPhone
+                requestKind : POST
+                items :
+                    - type : tel
+                      description : Taper votre numéro
+                      value : 330677154214
+                      name : numberPhone
