@@ -4,7 +4,7 @@ import os
 
 def executeNodeRed(name):
 	if name == "server":
-		os.system('node-red --userDir NR_orchestreur/ flow.json')
+		os.system('node-red --userDir NR_orchestreur/ flows_L50-FK.json')
 	if name == "rasp":
 		os.system('node-red --userDir NR_raspberry/ flows_raspberrypi.json')
 	if name == "ihm":
